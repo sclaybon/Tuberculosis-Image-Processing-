@@ -1,0 +1,41 @@
+The Dataset folder contains:
+
+•	Four Python Files:
+a.	SLIDEANALYZER_Individual_without_TF_Testing.py
+b.  SLIDEANALYZER_Individual_without_TF_Testing_Blackout.py
+c.	SLIDEANALYZER_Individual_with_TF_Testing.py
+d.	SLIDEANALYZER_ALL_with_TF_Testing.py
+•	92 TIFF images of format P (x).TIF consisting of unlabeled tuberculosis positive images
+•	One .npy file that includes bacilli locations using (x,y) coordinates
+
+The Labeled folder contains:
+
+•	92 TIFF images of format P (x).TIF consisting of labeled tuberculosis positive images
+
+Note: TF_Testing means that the center locations of the software detected bacilli are compared to the (x,y) coordinates of the actual bacilli locations (which are considered groundtruth).
+As such:
+
+•	SLIDEANALYZER_Individual_without_TF_Testing.py 
+a.	Outputs the number of software detected bacilli without comparing to groundtruth
+b.	Only tests one image at a time (i.e. the image specified in the code)
+•	SLIDEANALYZER_Individual_without_TF_Testing_Blackout.py 
+a.	Outputs the number of software detected bacilli without comparing to groundtruth
+b.	Only tests one image at a time (i.e. the image specified in the code)
+c.  Will return "No Bacilli Found" if the number of grayscale pixels with a value greater than 5 is less than 3
+•	SLIDEANALYZER_Individual_with_TF_Testing.py
+a.	Outputs the number of software detected bacilli and compares them to groundtruth
+b.	Outputs information such as True Positive, False Positive, Precision, and Recall
+c.	Only tests one image at a time (i.e. the image specified in the code)
+•	SLIDEANALYZER_Individual_with_TF_Testing.py
+a.	Builds on SLIDEANALYZER_Individual_with_TF_Testing.py
+b.	Runs through all P (x).TIF images in the folder that the code is placed in
+c.	Saves all of the Information to an excel file via the ‘Pandas’ data handler package
+
+Dataset Citation: Chang, J., Arbeláez, P., Switz, N., Reber, C., Tapley, A., Davis, J.L., Cattamanchi, A., Fletcher, D., and Malik, J.: Automated Tuberculosis Diagnosis Using Fluorescence Images from a Mobile Microscope. In: Ayache, N., Delingette, H., Golland, P., and Kensaku, M. (eds.) MICCAI 2012, Part III. LNCS, vol. 7512, pp. 345-352. Springer-Verlag, Berlin Heidelberg 2012.
+Original Dataset Location: https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/bioimages/
+
+The associated Thesis work can be found at the following location: https://vtechworks.lib.vt.edu/handle/10919/78237
+
+Any questions for this work may be directed to: sclaybon3@gmail.com
+	
+
